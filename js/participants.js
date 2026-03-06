@@ -166,5 +166,3 @@ function saveParticipants() {
   // Todo bien, navegamos al paso de exclusiones
   goToStep('step-exclusions');
 }
-
-

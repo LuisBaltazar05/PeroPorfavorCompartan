@@ -1,4 +1,3 @@
-
 function saveOrganizer() {
   var nameInput = document.getElementById('organizerName');
   var name = nameInput.value.trim();
@@ -59,3 +58,4 @@ function restoreOrganizer() {
 window.addEventListener('load', function() {
   restoreOrganizer();
 });
+

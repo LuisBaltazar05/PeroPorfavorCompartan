@@ -2,7 +2,7 @@
  * goToStep(stepId)
  * ----------------
  * Oculta todos los pasos y muestra únicamente el que recibe como parámetro.
- * 
+ *
  * @param {string} stepId - El id del paso en el que vamos
 **/
 function goToStep(stepId) {
