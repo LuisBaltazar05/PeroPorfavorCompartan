@@ -425,12 +425,25 @@ body::before {
 /* Input tipo date */
 input[type="date"] {
   color-scheme: dark;
+  background: var(--surface);
+  color: var(--text) !important;
 }
 
+input[type="date"]::-webkit-datetime-edit { color: var(--text); }
+input[type="date"]::-webkit-datetime-edit-fields-wrapper { color: var(--text); }
+input[type="date"]::-webkit-inner-spin-button { display: none; }
+
 input[type="date"]::-webkit-calendar-picker-indicator {
-  filter: invert(1);
+  background: transparent;
+  color: transparent;
+  width: 22px;
+  height: 22px;
   cursor: pointer;
-  opacity: 0.7;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23f5c518'%3E%3Cpath d='M19 4h-1V2h-2v2H8V2H6v2H5C3.9 4 3 4.9 3 6v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11zM7 11h2v2H7zm4 0h2v2h-2zm4 0h2v2h-2z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 1 !important;
+  filter: none !important;
 }
 
 input[type="date"]::-webkit-datetime-edit {

@@ -4,7 +4,10 @@ document.querySelectorAll(".event-btn").forEach(function(btn){
 
   btn.addEventListener("click",function(){
 
-    document.querySelectorAll(".event-btn").forEach(b=>b.classList.remove("btn-accent"))
+    document.querySelectorAll(".event-btn").forEach(b=>{
+      b.classList.remove("btn-accent")
+      b.classList.add("btn-outline-light")
+    })
 
     btn.classList.add("btn-accent")
 
