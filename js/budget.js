@@ -22,18 +22,18 @@ function showCustomBudget(){
 
 }
 
-document.getElementById("customBudget").addEventListener("input",function(){
+document.getElementById("customBudget").addEventListener("input", function() {
+  selectedBudget = parseInt(this.value);
 
-  selectedBudget=parseInt(this.value)
+  if (isNaN(selectedBudget)) {
+    selectedBudget = null;
+  }
 
-  saveBudget()
+  saveBudget();
+});
 
-})
-
-function saveBudget(){
-
-  localStorage.setItem("ppc_budget",JSON.stringify({
-    amount:selectedBudget
-  }))
-
+function saveBudget() {
+  localStorage.setItem("ppc_budget", JSON.stringify({
+    amount: selectedBudget
+  }));
 }

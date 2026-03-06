@@ -81,3 +81,6 @@ function saveEvent(){
 }
 
 generateDates()
+
+document.getElementById("customEventName").addEventListener("input", saveEvent);
+document.getElementById("customDate").addEventListener("input", saveEvent);

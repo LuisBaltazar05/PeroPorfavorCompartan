@@ -147,7 +147,7 @@ function removeParticipant(index) {
   localStorage.setItem('ppc_participants', JSON.stringify(participants));
 
   if (removed.length > 0) {
-    showToast( + removed[0].name + ' eliminado', 2000);
+    showToast( removed[0].name + ' eliminado', 2000);
   }
 
   renderParticipants();

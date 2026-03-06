@@ -455,3 +455,96 @@ body::before {
     font-size: 1.55rem;
   }
 }
+
+/* 13. Resultados */
+.result-box {
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: 14px;
+  padding: 1rem;
+  text-align: left;
+  animation: slideIn 0.25s ease;
+}
+
+.result-title {
+  font-size: 1rem;
+  font-weight: 800;
+  margin-bottom: 0.9rem;
+  text-align: center;
+}
+
+.data-item {
+  margin-bottom: 0.8rem;
+}
+
+.data-label {
+  display: block;
+  color: var(--accent);
+  font-weight: 800;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.25rem;
+}
+
+.data-value {
+  color: var(--text);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  word-break: break-word;
+}
+
+.result-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.result-item {
+  background: rgba(245,197,24,0.08);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.8rem 0.95rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.empty-text {
+  color: var(--muted);
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.raffle-box {
+  text-align: center;
+}
+
+.raffle-spinner {
+  font-size: 3rem;
+  animation: spinPulse 1s linear infinite;
+  margin-bottom: 0.75rem;
+}
+
+.raffle-status {
+  color: var(--muted);
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+@keyframes spinPulse {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.15);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+@media (max-width: 575.98px) {
+  .result-item {
+    font-size: 0.92rem;
+  }
+}
