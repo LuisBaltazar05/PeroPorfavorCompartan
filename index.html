@@ -176,7 +176,16 @@
     <div class="container py-5">
       <div class="row justify-content-center">
         <div class="col-12 col-sm-10 col-md-7 col-lg-5 text-center">
-          <div class="gift-card placeholder-step">
+          <div class="step-progress">
+            <div class="step-dot done"></div>
+            <div class="step-dot done"></div>
+            <div class="step-dot active"></div>
+            <div class="step-dot"></div>
+            <div class="step-dot"></div>
+            <div class="step-dot"></div>
+          </div>
+          <p class="step-label">Paso 3 de 6 — Exclusiones</p>
+          <div class="gift-card">
             <span class="section-icon">
               <animated-icons src="https://animatedicons.co/get-icon?name=Close&style=minimalistic&token=33a7e205-ac54-43a2-ab29-8acd13581964" trigger="loop" attributes='{"variationThumbColour":"#000000","variationName":"Dark","variationNumber":4,"numberOfGroups":2,"strokeWidth":2.5,"backgroundIsGroup":true,"defaultColours":{"group-1":"#FF0000FF","group-2":"#FFFFFFFF","background":"#FFFFFFFF"}}' height="90" width="90"></animated-icons>
             </span>
@@ -205,7 +214,16 @@
     <div class="container py-5">
       <div class="row justify-content-center">
         <div class="col-12 col-sm-10 col-md-7 col-lg-5 text-center">
-          <div class="gift-card placeholder-step">
+          <div class="step-progress">
+            <div class="step-dot done"></div>
+            <div class="step-dot done"></div>
+            <div class="step-dot done"></div>
+            <div class="step-dot active"></div>
+            <div class="step-dot"></div>
+            <div class="step-dot"></div>
+          </div>
+          <p class="step-label">Paso 4 de 6 — Tipo de evento y fecha</p>
+          <div class="gift-card">
             <span class="section-icon">
               <animated-icons src="https://animatedicons.co/get-icon?name=Firecracker&style=minimalistic&token=0e6f2ecc-a2ca-45ba-9eab-0926e9b25a78" trigger="loop" attributes='{"variationThumbColour":"#000000","variationName":"Dark","variationNumber":4,"numberOfGroups":2,"strokeWidth":1.52,"backgroundIsGroup":true,"defaultColours":{"group-1":"#F5C518FF","group-2":"#36CEDEFF","background":"#F5C518FF"}}' height="90" width="90"></animated-icons>
             </span> 
@@ -234,15 +252,19 @@
 
               <div id="dateOptions"></div>
 
+              <button class="btn btn-outline-light mt-2 mb-2" onclick="showCustomDate()">Otra Fecha </button>
+
               <input
                 type="date"
                 id="customDate"
                 class="form-control mt-2"
                 style="display:none"
               />
-              <button class="btn btn-outline-light" onclick="goToStep('step-exclusions')">← Atrás</button>
-              <button class="btn btn-accent" onclick="goToStep('step-budget')">Continuar →</button>
-            </div>
+
+              <div class="nav-footer">
+                <button class="btn btn-outline-light" onclick="goToStep('step-exclusions')">← Atrás</button>
+                <button class="btn btn-accent" onclick="goToStep('step-budget')">Continuar →</button>
+              </div>
           </div>
         </div>
       </div>
@@ -258,7 +280,16 @@
     <div class="container py-5">
       <div class="row justify-content-center">
         <div class="col-12 col-sm-10 col-md-7 col-lg-5 text-center">
-          <div class="gift-card placeholder-step">
+          <div class="step-progress">
+            <div class="step-dot done"></div>
+            <div class="step-dot done"></div>
+            <div class="step-dot done"></div>
+            <div class="step-dot done"></div>
+            <div class="step-dot active"></div>
+            <div class="step-dot"></div>
+          </div>
+          <p class="step-label">Paso 5 de 6 — Presupuesto</p>
+          <div class="gift-card">
             <span class="section-icon">
               <animated-icons src="https://animatedicons.co/get-icon?name=Income&style=minimalistic&token=0e6f2ecc-a2ca-45ba-9eab-0926e9b25a78" trigger="loop" attributes='{"variationThumbColour":"#000000","variationName":"Dark","variationNumber":4,"numberOfGroups":2,"strokeWidth":1.52,"backgroundIsGroup":true,"defaultColours":{"group-1":"#FFFFFFFF","group-2":"#36CEDEFF","background":"#FFC800FF"}}' height="90" width="90"></animated-icons>
             </span>
@@ -355,13 +386,6 @@
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!--
-    ORDEN IMPORTANTE DE LOS SCRIPTS:
-    1. app.js        → utilidades globales (goToStep, showToast)
-    2. organizer.js  → lógica del paso 1
-    3. participants.js → lógica del paso 2 con Drag and Drop
-    4-6. Los agrega B y C cuando terminen sus módulos
-  -->
   <script src="js/app.js"></script>
   <script src="js/organizer.js"></script>
   <script src="js/participants.js"></script>

@@ -422,6 +422,21 @@ body::before {
 }
 
 
+/* Input tipo date */
+input[type="date"] {
+  color-scheme: dark;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+input[type="date"]::-webkit-datetime-edit {
+  color: var(--text);
+}
+
 /* 
    12. RESPONSIVE
    Bootstrap breakpoints usados: sm (576px) y md (768px)
@@ -449,7 +464,7 @@ body::before {
 /* Tablet y escritorio (≥ 768px) */
 @media (min-width: 768px) {
   .gift-card {
-    padding: 2.25rem 2.5rem;
+    padding: 2.75rem 3.25rem;
   }
   .step-title {
     font-size: 1.55rem;

@@ -22,6 +22,12 @@ function showCustomEvent(){
 
 }
 
+function showCustomDate(){
+
+  document.getElementById("customDate").style.display="block"
+
+}
+
 function generateDates(){
 
   const container=document.getElementById("dateOptions")
