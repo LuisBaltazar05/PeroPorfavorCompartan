@@ -195,7 +195,7 @@
               <button class="btn btn-outline-light" onclick="enableExclusions()">Establecer exclusiones</button>
             </div>
             <div id="exclusionsContainer"></div>
-            <div class="nav-footer justify-content-center">
+            <div class="nav-footer">
             <button class="btn btn-outline-light" onclick="goToStep('step-participants')">← Atrás</button>
             <button class="btn btn-accent" onclick="goToStep('step-event')">Continuar →</button>
           </div>
@@ -230,7 +230,7 @@
             <h2 class="step-title">Paso 4: Tipo de evento y fecha</h2>
             <p class="step-subtitle">Selecciona el tipo de evento</p>
 
-              <div id="eventOptions" class="mb-3">
+              <div id="eventOptions" class="d-flex flex-wrap gap-2 mb-3">
                 <button class="btn btn-outline-light event-btn">Navidad</button>
                 <button class="btn btn-outline-light event-btn">Intercambio</button>
                 <button class="btn btn-outline-light event-btn">San Valentín</button>
@@ -238,7 +238,7 @@
                 <button class="btn btn-outline-light event-btn">Día de la Madre</button>
               </div>
 
-              <button class="btn btn-accent mb-3" onclick="showCustomEvent()">Mostrar más</button>
+              <button class="btn btn-outline-light mb-3" onclick="showCustomEvent()">Mostrar más</button>
 
               <input
                 type="text"
@@ -294,7 +294,7 @@
               <animated-icons src="https://animatedicons.co/get-icon?name=Income&style=minimalistic&token=0e6f2ecc-a2ca-45ba-9eab-0926e9b25a78" trigger="loop" attributes='{"variationThumbColour":"#000000","variationName":"Dark","variationNumber":4,"numberOfGroups":2,"strokeWidth":1.52,"backgroundIsGroup":true,"defaultColours":{"group-1":"#FFFFFFFF","group-2":"#36CEDEFF","background":"#FFC800FF"}}' height="90" width="90"></animated-icons>
             </span>
             <h2 class="step-title">Presupuesto</h2>
-            <div id="budgetOptions" class="mb-3">
+            <div id="budgetOptions" class="d-flex flex-wrap gap-2 mb-3">
               <button class="btn btn-outline-light budget-btn">$100</button>
               <button class="btn btn-outline-light budget-btn">$150</button>
               <button class="btn btn-outline-light budget-btn">$200</button>
@@ -302,7 +302,7 @@
               <button class="btn btn-outline-light budget-btn">$500</button>
             </div>
 
-            <button class="btn btn-accent mb-3" onclick="showCustomBudget()">Otro</button>
+            <button class="btn btn-outline-light mb-3" onclick="showCustomBudget()">Otro</button>
 
             <input
               type="number"
@@ -311,7 +311,7 @@
               placeholder="Cantidad"
               style="display:none"
             />
-            <div class="nav-footer justify-content-center">
+            <div class="nav-footer">
               <button class="btn btn-outline-light" onclick="goToStep('step-event')">← Atrás</button>
               <button class="btn btn-accent" onclick="goToStep('step-results')">Continuar →</button>
             </div>
