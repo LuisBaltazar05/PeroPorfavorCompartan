@@ -17,6 +17,14 @@ function goToStep(stepId) {
     target.classList.add('active');
   }
   window.scrollTo({ top: 0, behavior: 'smooth' });
+
+  // Si llegamos al paso de resultados, refrescamos el resumen si ya estaba abierto
+  if (stepId === 'step-results') {
+    var dataBox = document.getElementById('eventDataBox');
+    if (dataBox && dataBox.style.display !== 'none') {
+      showEventData();
+    }
+  }
 }
 
 
@@ -24,8 +32,8 @@ function goToStep(stepId) {
  * showToast(mensaje, duracion)
  * ----------------------------
  * Muestra una notificacion de validaciones y avisos en la parte inferior de la pantalla.
- * @param {string} msg 
- * @param {number} duration 
+ * @param {string} msg
+ * @param {number} duration
 **/
 function showToast(msg, duration) {
   if (duration === undefined) { duration = 2500; }
