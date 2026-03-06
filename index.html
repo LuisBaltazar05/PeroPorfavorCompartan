@@ -295,24 +295,61 @@
         SORTEO Y RESULTADOS
         Persona SANTI
        ================================================ -->
-  <section class="step" id="step-results">
-    <div class="container py-5">
-      <div class="row justify-content-center">
-        <div class="col-12 col-sm-10 col-md-7 col-lg-5 text-center">
-          <div class="gift-card placeholder-step">
-            <span class="section-icon">
-              <animated-icons src="https://animatedicons.co/get-icon?name=Fortune&style=minimalistic&token=0e6f2ecc-a2ca-45ba-9eab-0926e9b25a78" trigger="loop" attributes='{"variationThumbColour":"#000000","variationName":"Dark","variationNumber":4,"numberOfGroups":2,"strokeWidth":1.52,"backgroundIsGroup":true,"defaultColours":{"group-1":"#420000FF","group-2":"#36CEDEFF","background":"#F13E3EFF"}}' height="90" width="90"></animated-icons>
-            </span>
-            <h2 class="step-title">Paso 6: Sorteo y resultados</h2>
-            <p class="step-subtitle">[ Persona C implementa este paso ]</p>
-            <div class="nav-footer justify-content-center">
-              <button class="btn btn-outline-light" onclick="goToStep('step-budget')">← Atrás</button>
-            </div>
+<section class="step" id="step-results">
+  <div class="container py-4 py-md-5">
+    <div class="row justify-content-center">
+      <div class="col-12 col-sm-10 col-md-7 col-lg-5">
+        <div class="step-progress">
+          <div class="step-dot done"></div>
+          <div class="step-dot done"></div>
+          <div class="step-dot done"></div>
+          <div class="step-dot done"></div>
+          <div class="step-dot done"></div>
+          <div class="step-dot active"></div>
+        </div>
+        <p class="step-label">Paso 6: Sorteo y resultados</p>
+
+        <div class="gift-card">
+          <span class="section-icon">
+            <animated-icons src="https://animatedicons.co/get-icon?name=Fortune&style=minimalistic&token=0e6f2ecc-a2ca-45ba-9eab-0926e9b25a78" trigger="loop" attributes='{"variationThumbColour":"#000000","variationName":"Dark","variationNumber":4,"numberOfGroups":2,"strokeWidth":1.52,"backgroundIsGroup":true,"defaultColours":{"group-1":"#420000FF","group-2":"#36CEDEFF","background":"#F13E3EFF"}}' height="90" width="90"></animated-icons>
+          </span>
+
+          <h2 class="step-title">Sorteo y resultados</h2>
+          <p class="step-subtitle">Consulta los datos guardados y realiza el intercambio</p>
+
+          <div class="results-actions d-grid gap-2 mb-4">
+            <button class="btn btn-outline-light" onclick="showEventData()">
+              Ver datos del evento
+            </button>
+            <button class="btn btn-accent" onclick="startRaffleAnimation()">
+              Realizar sorteo
+            </button>
+          </div>
+
+          <div id="eventDataBox" class="result-box mb-3" style="display:none;">
+            <h3 class="result-title">Datos del evento</h3>
+            <div id="eventDataContent"></div>
+          </div>
+
+          <div id="raffleAnimationBox" class="result-box raffle-box mb-3" style="display:none;">
+            <h3 class="result-title">Sorteando...</h3>
+            <div class="raffle-spinner">🎁</div>
+            <p id="raffleStatus" class="raffle-status">Preparando nombres...</p>
+          </div>
+
+          <div id="resultsBox" class="result-box" style="display:none;">
+            <h3 class="result-title">Resultados</h3>
+            <div id="resultsContent"></div>
+          </div>
+
+          <div class="nav-footer">
+            <button class="btn btn-outline-light" onclick="goToStep('step-budget')">← Atrás</button>
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
 
   <!-- Bootstrap JS -->
@@ -332,6 +369,7 @@
   <script src="js/exclusions.js"></script>
   <script src="js/event.js"></script>
   <script src="js/budget.js"></script>
+  <script src="js/results.js"></script>
 
 </body>
 </html>

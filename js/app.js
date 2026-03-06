@@ -38,3 +38,12 @@ function showToast(msg, duration) {
     toast.classList.remove('show');
   }, duration);
 }
+
+function escapeHtml(text) {
+  return String(text)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;');
+}
